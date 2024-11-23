@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Swat Profile</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    
+    <div class="header">        <img src="https://hessa.utah.edu/wp-content/uploads/sites/81/2023/02/uswat-logo-1024x1024.png " alt="logo"  class="logo"> 
+
+        <h1>Central Library Of University Of Swat </h1>
+    </div>
+<div class="container">
+    <!-- Sidebar for Tags -->
+    <div class="sidebar">
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#44779">Borrowed Books</a></li>
+            <li><a href="#44778">Library Rules</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <!-- Profile Section -->
+        <section id="profile" class="section">
+            <h2>University of Swat Library</h2>
+            <img src="<%= user.photo %>" alt="profile image" width="200px" height="200px" class="profile image">
+            <div class="info-box">
+                <label>Name:</label><span><%= user.name %>!</span>
+            </div>
+            <div class="info-box">
+                <label>Student ID:</label><span><%= user.nic %>!</span>
+            </div>
+            <div class="info-box">
+                <label>Program:</label><span><%= user.discipline %>!</span>
+            </div>
+        </section>
+
+        <!-- Borrowed Books Section -->
+        <section id="44779" class="section">
+          <div class="table">
+            <h1>Borrowed Books</h1>
+                <table>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Taken Date</th>
+                        <th>Return Deadline</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>[Book Title]</td>
+                        <td>[Taken Date]</td>
+                        <td>[Return Date]</td>
+                        <td>Borrowed</td>
+                    </tr>
+                </table>
+            </div> 
+        </section>
+
+        <!-- Library Rules Section -->
+        <section id="44778" class="section">
+            <div class="rules">
+                <h1>Library Rules</h1><br>
+            <ol>
+                <li>For any borrowed material that is lost, damaged, or destroyed, you will be bound to pay three times the value of the item.</li>
+                <li>All books must be returned by their due date.</li>
+                <li>Please be respectful of the library and its resources.</li>
+                <li>Keep your borrowed books in good condition.</li>
+                <li>Do not write in or damage the books.</li>
+                <li>Please return books to the library in person.</li>
+                <li>Please ask a librarian for assistance if you need help finding a book.</li>
+            </ol>
+            </div>
+            
+        </section>
+
+        <!-- Contact Information Section -->
+        <section id="contact" class="section">
+            <h2>Contact Information</h2>
+            <div class="info-box">
+                <label>Phone:</label><span>[Library Phone Number]</span>
+            </div>
+            <div class="info-box">
+                <label>Email:</label><span>[Library Email Address]</span>
+            </div>
+            <div class="info-box">
+                <label>Website:</label><span>[Library Website]</span>
+            </div>
+            <div class="info-box">
+                <label>Location:</label><span>[Library Location]</span>
+            </div>
+            <div class="info-box">
+                <label>Opening Hours:</label><span>[Library Opening Hours]</span>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

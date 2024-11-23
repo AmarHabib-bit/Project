@@ -1,0 +1,21 @@
+{
+  "name": "cemtral-library-uos",
+  "version": "1.0.0",
+  "description": "sir kiramat project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Amar Habib, Shama Islam, Jawhar Ali, SafiUllah khan, Haya Fahim :) 03488597922/-",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.2",
+    "moongose": "^1.0.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}

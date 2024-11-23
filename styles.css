@@ -1,0 +1,237 @@
+/* Reset basic styling */
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #0f2e68;
+
+    padding-bottom: 1000px;
+  }
+  
+  .container {
+    display: flex;
+    margin: 0 auto;
+    max-width: auto;
+  }
+
+  .header {
+    display: flex;
+    margin-left: 20%;
+    background-color: #0f2e68;
+  }
+
+  .header img {
+    float: left;
+    width: 120px;
+    height: 120px;
+    padding-top: 15px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+  
+  }
+  
+  .header h1 {
+    position: relative;
+    color: #ddd;
+    font-size: 70px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 40px;
+
+  }
+ 
+
+ 
+  /* .header h1 {
+    background-attachment: fixed;
+    color: #ddd;
+    size: 200px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    background-color: #0a0350;
+    padding: 25px;
+    margin-bottom:0px;
+    
+  } */
+  
+
+  
+  /* Sidebar Styling */
+  .sidebar {
+
+   
+    width: 200px;
+    background-color: #0f2e68;
+    border: 0px;
+    padding: 20px;
+    margin-right: 2px;
+    margin-top: 0px;
+    padding-bottom: 100%;
+    padding-right: 100px;
+  }
+  
+  .sidebar h3 {
+    margin-bottom: 30px;
+    padding-left: 10px;
+    color: #ddd;
+    font-size: xx-large;
+    
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-right: 0px;
+  }
+  
+  .sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: solid;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: underline;
+    text-shadow: #0a0350;
+  }
+  
+  .sidebar a:hover {
+    background-color: #9d90e4;
+  }
+  
+  /* Content Styling */
+  .content {
+    flex: 1;
+    background-color: #e2e8ee;
+    background-image: url(https://hessa.utah.edu/wp-content/uploads/sites/81/2023/02/uswat-logo-1024x1024.png );
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: soft-light;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 0px;
+  }
+
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+
+  
+  .content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .content p {
+    margin-bottom: 10px;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .info-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .info-box label {
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: underline;
+    padding-bottom: 20px;
+  }
+  
+  .info-box span {
+    font-style: italic;
+  }
+
+  .table h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    padding-bottom: 60px;
+  }
+
+  .table table {
+    font-size: larger;
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+
+  }
+
+  .table th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    padding-bottom: 30px;
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .rules h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-decoration: underline;
+    padding-bottom: 50px;
+  }
+
+  .rules li {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+  }
+  .rules ol {
+    padding-left: 30px;
+    padding-bottom: 10px;
+  }
+
+
+
+  /* Hide content sections by default */
+  .content h2, .content p, .content ul {
+    display: none;
+  }
+  
+  /* The 'active' class is used to display the content */
+  .active {
+    display: block;
+  }
+  

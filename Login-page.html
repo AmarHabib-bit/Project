@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Login - University of Swat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header img {
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .header h2 {
+            color: #34495e;
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 90%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .links a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #2980b9;
+        }
+
+        .error-message {
+            background-color: #fee;
+            color: #e74c3c;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://api.ideagist.com/wp-content/uploads/2019/10/University-of-Swat-LOGO-1-1.png" alt="University Logo" width="100" height="100">
+            <h1>CENTRAL LIBRARY UNIVERSITY OF SWAT</h1>
+            <h2>Member Login</h2>
+        </div>
+
+        <!-- Error message box -->
+        <div class="error-message" id="error-message">
+            Invalid credentials. Please try again.
+        </div>
+
+        <!-- Login form -->
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+
+        <!-- Links to other pages -->
+        <div class="links">
+            <a href="#">Forgot Password?</a>
+            <a href="http://localhost:3000/central-library-uos/signup">New Member? Register</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Gather form data
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Send POST request to the server for login
+            try {
+                const response = await fetch('/central-library-uos/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                // Check if login is successful
+                if (response.ok) {
+                    window.location.href = '/central-library-uos/homepage'; // Redirect to homepage if login is successful
+                } else {
+                    // Show error message if login fails
+                    document.getElementById('error-message').style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Login failed:', error);
+                document.getElementById('error-message').style.display = 'block'; // Show error if something goes wrong
+            }
+        });
+    </script>
+</body>
+</html>
